@@ -1,6 +1,6 @@
 # Docker Test SAML 2.0 Identity Provider (IdP)
 
-[![DockerHub Pulls](https://img.shields.io/docker/pulls/kristophjunge/test-saml-idp.svg)](https://hub.docker.com/r/kristophjunge/test-saml-idp/) [![DockerHub Stars](https://img.shields.io/docker/stars/kristophjunge/test-saml-idp.svg)](https://hub.docker.com/r/kristophjunge/test-saml-idp/) [![GitHub Stars](https://img.shields.io/github/stars/kristophjunge/docker-test-saml-idp.svg?label=github%20stars)](https://github.com/kristophjunge/docker-test-saml-idp) [![GitHub Forks](https://img.shields.io/github/forks/kristophjunge/docker-test-saml-idp.svg?label=github%20forks)](https://github.com/kristophjunge/docker-test-saml-idp) [![GitHub License](https://img.shields.io/github/license/kristophjunge/docker-test-saml-idp.svg)](https://github.com/kristophjunge/docker-test-saml-idp)
+[![DockerHub Pulls](https://img.shields.io/docker/pulls/excelsiorsoft/simple-saml-php-idp.svg)](https://hub.docker.com/r/excelsiorsoft/simple-saml-php-idp/) [![DockerHub Stars](https://img.shields.io/docker/stars/excelsiorsoft/simple-saml-php-idp.svg)](https://hub.docker.com/r/excelsiorsoft/simple-saml-php-idp/) [![GitHub Stars](https://img.shields.io/github/stars/excelsiorsoft/simple-saml-php-idp.svg?label=github%20stars)](https://github.com/kristophjunge/docker-test-saml-idp) [![GitHub Forks](https://img.shields.io/github/forks/excelsiorsoft/simple-saml-php-idp.svg?label=github%20forks)](https://github.com/excelsiorsoft/simple-saml-php-idp) [![GitHub License](https://img.shields.io/github/license/excelsiorsoft/simple-saml-php-idp.svg)](https://github.com/excelsiorsoft/simple-saml-php-idp)
 
 ![Seal of Approval](https://raw.githubusercontent.com/kristophjunge/docker-test-saml-idp/master/seal.jpg)
 
@@ -17,8 +17,8 @@ The contained version of SimpleSAMLphp is 1.15.2.
 
 ## Supported Tags
 
-- `1.15` [(Dockerfile)](https://github.com/kristophjunge/docker-test-saml-idp/blob/1.15/Dockerfile)
-- `1.14` [(Dockerfile)](https://github.com/kristophjunge/docker-test-saml-idp/blob/1.14/Dockerfile)
+- `1.15` [(Dockerfile)](https://github.com/excelsiorsoft/simple-saml-php-idp/blob/1.15/Dockerfile)
+- `1.14` [(Dockerfile)](https://github.com/excelsiorsoft/simple-saml-php-idp/blob/1.14/Dockerfile)
 
 
 ## Changelog
@@ -32,10 +32,12 @@ See [CHANGELOG.md](https://github.com/kristophjunge/docker-test-saml-idp/blob/ma
 docker run --name=testsamlidp_idp \
 -p 8080:8080 \
 -p 8443:8443 \
--e SIMPLESAMLPHP_SP_ENTITY_ID=http://app.example.com \
--e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=http://localhost/simplesaml/module.php/saml/sp/saml2-acs.php/test-sp \
--e SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE=http://localhost/simplesaml/module.php/saml/sp/saml2-logout.php/test-sp \
--d kristophjunge/test-saml-idp
+-e SIMPLESAMLPHP_SP_ENTITY_ID=https://d116ab1a.ngrok.io/saml/metadata \
+-e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=https://d116ab1a.ngrok.io/saml/?acs  \
+-e SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE=https://d116ab1a.ngrok.io/saml/?slo \
+-v $(pwd)/users.php:/var/www/simplesamlphp/config/authsources.php \
+-v $(pwd)/saml20-idp-hosted.php:/var/www/simplesamlphp/metadata/saml20-idp-hosted.php \
+-d sleyzezon/simple-saml-php-idp:1.0
 ```
 
 There are two static users configured in the IdP with the following data:
@@ -94,13 +96,8 @@ Start the development IdP with the command above (usage) and initiate the login 
 Click under `Authentication` > `Test configured authentication sources` > `test-sp` and login with one of the test credentials.
 
 
-## Contributing
-
-See [CONTRIBUTING.md](https://github.com/kristophjunge/docker-test-saml-idp/blob/master/docs/CONTRIBUTING.md) for information on how to contribute to the project.
-
-See [CONTRIBUTORS.md](https://github.com/kristophjunge/docker-test-saml-idp/blob/master/docs/CONTRIBUTORS.md) for the list of contributors.
 
 
 ## License
 
-This project is licensed under the MIT license by Kristoph Junge.
+This project is licensed under the MIT license.
