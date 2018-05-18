@@ -17,13 +17,13 @@ The contained version of SimpleSAMLphp is 1.15.2.
 
 ## Supported Tags
 
-- `1.15` [(Dockerfile)](https://github.com/excelsiorsoft/simple-saml-php-idp/blob/1.15/Dockerfile)
-- `1.14` [(Dockerfile)](https://github.com/excelsiorsoft/simple-saml-php-idp/blob/1.14/Dockerfile)
+- `1.15` [(Dockerfile)](https://github.com/excelsiorsoft/simple-saml-php-idp/blob/master/Dockerfile)
+
 
 
 ## Changelog
 
-See [CHANGELOG.md](https://github.com/kristophjunge/docker-test-saml-idp/blob/master/docs/CHANGELOG.md) for information about the latest changes.
+See [CHANGELOG.md](https://github.com/excelsiorsoft/simple-saml-php-idp/blob/master/docs/CHANGELOG.md) for information about the latest changes.
 
 
 ## Usage
