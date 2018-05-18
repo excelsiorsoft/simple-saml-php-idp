@@ -32,9 +32,9 @@ See [CHANGELOG.md](https://github.com/excelsiorsoft/simple-saml-php-idp/blob/mas
 docker run --name=testsamlidp_idp \
 -p 8080:8080 \
 -p 8443:8443 \
--e SIMPLESAMLPHP_SP_ENTITY_ID=https://d116ab1a.ngrok.io/saml/metadata \
--e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=https://d116ab1a.ngrok.io/saml/?acs  \
--e SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE=https://d116ab1a.ngrok.io/saml/?slo \
+-e SIMPLESAMLPHP_SP_ENTITY_ID=https://<secure-web-proxy-url>/saml/metadata \
+-e SIMPLESAMLPHP_SP_ASSERTION_CONSUMER_SERVICE=https://<secure-web-proxy-url>/saml/?acs  \
+-e SIMPLESAMLPHP_SP_SINGLE_LOGOUT_SERVICE=https://<secure-web-proxy-url>/saml/?slo \
 -v $(pwd)/users.php:/var/www/simplesamlphp/config/authsources.php \
 -v $(pwd)/saml20-idp-hosted.php:/var/www/simplesamlphp/metadata/saml20-idp-hosted.php \
 -d sleyzezon/simple-saml-php-idp:1.0
