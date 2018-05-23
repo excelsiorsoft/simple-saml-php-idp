@@ -4,6 +4,7 @@
 
 ![Seal of Approval](https://raw.githubusercontent.com/kristophjunge/docker-test-saml-idp/master/seal.jpg)
 
+
 Docker container with a plug and play SAML 2.0 Identity Provider (IdP) for development and testing.
 
 Built with [SimpleSAMLphp](https://simplesamlphp.org). Based on official PHP7 Apache [images](https://hub.docker.com/_/php/).
