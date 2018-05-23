@@ -2,7 +2,7 @@
 
 [![DockerHub Pulls](https://img.shields.io/docker/pulls/sleyzezon/simple-saml-php-idp.svg)](https://hub.docker.com/r/sleyzezon/simple-saml-php-idp/) [![DockerHub Stars](https://img.shields.io/docker/stars/sleyzezon/simple-saml-php-idp.svg)](https://hub.docker.com/r/sleyzezon/simple-saml-php-idp/) [![GitHub Stars](https://img.shields.io/github/stars/excelsiorsoft/simple-saml-php-idp.svg?label=github%20stars)](https://github.com/excelsiorsoft/simple-saml-php-idp) [![GitHub Forks](https://img.shields.io/github/forks/excelsiorsoft/simple-saml-php-idp.svg?label=github%20forks)](https://github.com/excelsiorsoft/simple-saml-php-idp) [![GitHub License](https://img.shields.io/github/license/excelsiorsoft/simple-saml-php-idp.svg)](https://github.com/excelsiorsoft/simple-saml-php-idp)
 
-![Seal of Approval](https://raw.githubusercontent.com/kristophjunge/docker-test-saml-idp/master/seal.jpg)
+![Seal of Approval](https://github.com/slkasisto/simple-saml-php-idp/blob/master/seal.jpg)
 
 
 Docker container with a plug and play SAML 2.0 Identity Provider (IdP) for development and testing.
